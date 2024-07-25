@@ -7,7 +7,16 @@ https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/instal
 
 # Creating Environment
 ### Create Conda Environment(Isolated)
-conda create --prefix ./tfod python=3.9
+    conda create --prefix ./tfod python=3.9
 
 ### Activate Environment
-conda activate ./tfod
+    conda activate ./tfod
+
+
+# Tensor Flow installation
+### pip installation
+    pip install --ignore-installed --upgrade tensorflow==2.5.0
+
+### Verification
+    python -c "import tensorflow as tf;
+    print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
