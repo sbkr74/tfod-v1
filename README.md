@@ -19,12 +19,14 @@ https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/instal
 
 ### Verification
 `CPU`
+
     python -c "import tensorflow as tf;
     print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 
 <img src = "repo_files\verify.jpg">
 
 `GPU`
+
     python -c "import tensorflow as tf; 
     print(list(tf.config.experimental.list_physical_devices('GPU')));"
 
