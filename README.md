@@ -31,3 +31,16 @@ https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/instal
     print(list(tf.config.experimental.list_physical_devices('GPU')));"
 
 <img src = "repo_files\verify_gpu.jpg">
+
+# Downloading TensorFlow Garden Model
+#### 1. Create `TensorFLow` directory.
+#### 2. GIT clone `TensorFlow Models Repository` inside TensorFlow folder.
+```
+TensorFLow/
+    |-----Models/
+            |----community
+            |----docs
+            |----Official
+            |----research
+            |---- ...
+``` 
