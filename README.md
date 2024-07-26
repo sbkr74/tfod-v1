@@ -60,10 +60,17 @@ Step2:
 ```
 
 `Navigate`
-
-    cd Tensorflow\models\research\
+```cmd
+cd Tensorflow\models\research\
+```
+**Either use cmd or shell**
 
 `CMD`
-
-    for /f %i in ('dir /b object_detection\protos\*.proto') do protoc object_detection\protos\%i --python_out=.
+```cmd
+for /f %i in ('dir /b object_detection\protos\*.proto') do protoc object_detection\protos\%i --python_out=.
+```
+`Powershell`
+```sh
+Get-ChildItem object_detection/protos/*.proto | foreach {protoc "object_detection/protos/$($_.Name)" --python_out=.}
+```
 
