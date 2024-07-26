@@ -83,3 +83,12 @@ pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonA
 ```
 
 Note that, according to the package’s instructions, Visual C++ 2015 build tools must be installed and on your path. If they are not, make sure to install them from <a href ="https://go.microsoft.com/fwlink/?LinkId=691126">here</a>.
+
+# Install Tensorflow Object Detection API
+
+```sh
+# From within TensorFlow/models/research/
+cp object_detection/packages/tf2/setup.py .
+python -m pip install .
+```
+
