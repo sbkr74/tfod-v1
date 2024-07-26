@@ -44,3 +44,26 @@ TensorFLow/
             |----research
             |---- ...
 ``` 
+**Protoc files to current directory**  
+`CMD`  
+
+    for /f %i in ('dir /b "C:\Program Files\Google Protobuf\include\google\protobuf\*.proto"') do protoc ""C:\Program Files\Google Protobuf\include\google\protobuf\%i" --python_out=.
+
+### Protobuf Installation
+**Download protoc-27.2-win64.zip**
+https://github.com/protocolbuffers/protobuf/releases/tag/v27.2
+
+**Setup Env Path for Protoc**
+```
+Step1: 
+Step2:
+```
+
+`Navigate`
+
+    cd Tensorflow\models\research\
+
+`CMD`
+
+    for /f %i in ('dir /b object_detection\protos\*.proto') do protoc object_detection\protos\%i --python_out=.
+
