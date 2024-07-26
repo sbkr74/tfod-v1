@@ -63,7 +63,8 @@ Step2:
 ```cmd
 cd Tensorflow\models\research\
 ```
-**Either use cmd or shell**
+**Either use cmd or shell**  
+This command generates Python code from `.proto` files located in the `object_detection/protos` directory using the `protoc` compiler. The generated Python files are saved in the current directory.
 
 `CMD`
 ```cmd
@@ -73,4 +74,12 @@ for /f %i in ('dir /b object_detection\protos\*.proto') do protoc object_detecti
 ```sh
 Get-ChildItem object_detection/protos/*.proto | foreach {protoc "object_detection/protos/$($_.Name)" --python_out=.}
 ```
+# Coco API installation
+Run the following command to install `pycocotools` with Windows support.
 
+```sh
+pip install cython
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+```
+
+Note that, according to the package’s instructions, Visual C++ 2015 build tools must be installed and on your path. If they are not, make sure to install them from <a href ="https://go.microsoft.com/fwlink/?LinkId=691126">here</a>.
