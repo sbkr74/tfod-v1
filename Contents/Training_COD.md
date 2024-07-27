@@ -120,4 +120,6 @@ Press the “Select Folder” button, to start annotating your images.
 
 Once open, you should see a window similar to the one below:
 
+<img src="..\repo_files\labelImg.jpg">
+
 once you annotate all your images, a set of new *.xml files, one for each image, should be generated inside your training_demo/images folder.
