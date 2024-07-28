@@ -136,5 +136,17 @@ Once you have decided how you will be splitting your dataset, copy all training 
 TensorFlow requires a label map, which namely maps each of the used labels to an integer values. This label map is used both by the training and detection processes.
 
 Below is example of label map so you can distinguish.
+```
+item {
+    id: 1
+    name: 'hi'
+}
+
+item {
+    id: 2
+    name: 'call'
+}
+...
+```
 
 Label map files have the extention .pbtxt and should be placed inside the `training_demo/annotations` folder.
