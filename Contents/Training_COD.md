@@ -150,3 +150,7 @@ item {
 ```
 
 Label map files have the extention .pbtxt and should be placed inside the `training_demo/annotations` folder.
+
+## 3. Create TensorFlow Records
+Now that we have generated our annotations and split our dataset into the desired training and testing subsets, it is time to convert our annotations into the so called `TFRecord` format.
+
