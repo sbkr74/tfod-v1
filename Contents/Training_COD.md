@@ -123,3 +123,12 @@ Once open, you should see a window similar to the one below:
 <img src="..\repo_files\labelImg.jpg">
 
 once you annotate all your images, a set of new *.xml files, one for each image, should be generated inside your training_demo/images folder.
+
+# 2.3.Partition Dataset
+<p>Once you have finished annotating your image dataset, it is a general convention to use only part of it for training, and the rest is used for evaluation purposes.
+</p>
+
+Typically, the ratio is` 9:1, i.e. 90%` of the images are used for training and the rest `10%` is maintained for testing, but you can chose whatever ratio suits your needs.
+
+Once you have decided how you will be splitting your dataset, copy all training images, together with their corresponding `*.xml` files, and place them inside the `training_demo/images/train` folder. Similarly, copy all testing images, with their `*.xml` files, and paste them inside `training_demo/images/test`.
+
