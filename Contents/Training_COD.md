@@ -154,3 +154,24 @@ Label map files have the extention .pbtxt and should be placed inside the `train
 ## 3. Create TensorFlow Records
 Now that we have generated our annotations and split our dataset into the desired training and testing subsets, it is time to convert our annotations into the so called `TFRecord` format.
 
+### Convert *.xml to *.record
+
+To do this we can use a <a href="https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/_downloads/da4babe668a8afb093cc7776d7e630f3/generate_tfrecord.py">script</a> that iterates through all *.xml files in the `training_demo/images/train` and `training_demo/images/test` folders, and generates a `*.record` file for each of the two. 
+
+```
+TensorFlow/
+├─ addons/ (Optional)
+│  └─ labelImg/
+├─ models/
+│  ├─ community/
+│  ├─ official/
+│  ├─ orbit/
+│  ├─ research/
+│  └─ ...
+├─ scripts/
+│  └─ preprocessing/
+└─ workspace/
+   └─ training_demo/
+```
+Downloaded <a href="https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/_downloads/da4babe668a8afb093cc7776d7e630f3/generate_tfrecord.py">Script</a> should be save inside `TensorFlow/scripts/preprocessing`
+
