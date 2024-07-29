@@ -213,3 +213,4 @@ training_demo/
 │     └─ pipeline.config
 └─ ...
 ```
+<b>Refer to <a href="https://github.com/sbkr74/tfod-v1/blob/main/pre-trained-model.py">code</a> for downloading and unzipping</b>
