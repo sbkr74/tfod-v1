@@ -1,5 +1,5 @@
 import os
-CUSTOM_MODEL_NAME = 'ssd_mobnet_v2_fpnlite' 
+CUSTOM_MODEL_NAME = 'ssd_mobilenet_v2_fpnlite' 
 PRETRAINED_MODEL_NAME = 'ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8'
 paths = {
     'PRETRAINED_MODEL_PATH': os.path.join('Tensorflow', 'workspace','training_demo','pre-trained-models'),
