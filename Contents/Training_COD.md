@@ -199,6 +199,7 @@ python generate_tfrecord.py -x [PATH_TO_IMAGES_FOLDER]/test -l [PATH_TO_ANNOTATI
 
 
 ## 4. Download and configure Pre-trained Model
+### 4.1. Download and extract
 To begin with, we need to download the latest pre-trained network for the model we wish to use. This can be done by simply clicking on the name of the desired model in the table found in <a href ="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md">TensorFlow 2 Detection Model Zoo</a>. Clicking on the name of your model should initiate a download for a `*.tar.gz` file.
 
 Once the `*.tar.gz` file has been downloaded, open it using a decompression program of your choice `(e.g. 7zip, WinZIP, etc.)`. Next, open the `*.tar` folder that you see when the compressed folder is opened, and extract its contents inside the folder `training_demo/pre-trained-models`. Since we downloaded the `SSD Mobilenet v2 fpnlite 320x320 model`, our training_demo directory should now look as follows:
@@ -214,3 +215,14 @@ training_demo/
 └─ ...
 ```
 <b>Refer to <a href="https://github.com/sbkr74/tfod-v1/blob/main/pre-trained-model.py">code</a> for downloading and unzipping</b>
+
+### 4.2. Configure Training pipeline
+Now that we have downloaded and extracted our pre-trained model, let’s create a directory for our training job. Under the `training_demo/models` create a new directory named `ssd_mobilenet_v2_fpnlite` and copy the `training_demo/pre-trained-models/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/pipeline.config` file inside the newly created directory. Our `training_demo/models` directory should now look like this.
+```
+training_demo/
+├─ ...
+├─ models/
+│  └─ ssd_mobilenet_v2_fpnlite/
+│     └─ pipeline.config
+└─ ...
+```
