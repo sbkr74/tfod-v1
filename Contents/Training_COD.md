@@ -251,5 +251,9 @@ INFO:tensorflow:Step 100 per-step time 1.153s loss=0.761
 I0716 05:26:55.879558  1364 model_lib_v2.py:632] Step 100 per-step time 1.153s loss=0.761
 ...
 ```
+This ensures you have successfully trained the model.
+
+### 5.1 Evaluate the Model (optional)
+By default, the training process logs some basic measures of training performance. These seem to change depending on the installed version of Tensorflow.
 
 
