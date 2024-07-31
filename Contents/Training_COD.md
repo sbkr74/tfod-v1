@@ -236,7 +236,7 @@ Before we begin training our model, let’s go and copy the `TensorFlow/models/r
 
 Now, to initiate a new training job, open a new Terminal, cd inside the training_demo folder and run the following command:
 ```sh
-python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config
 ```
 Once the training process has been initiated, you should see a series of print outs similar to the one below (plus/minus some warnings):
 
