@@ -240,4 +240,16 @@ python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_
 ```
 Once the training process has been initiated, you should see a series of print outs similar to the one below (plus/minus some warnings):
 
+```
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_mean
+W0716 05:24:19.107540  1364 util.py:143] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_mean
+WARNING:tensorflow:Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_variance
+W0716 05:24:19.108539  1364 util.py:143] Unresolved object in checkpoint: (root).model._box_predictor._base_tower_layers_for_heads.class_predictions_with_background.4.10.moving_variance
+...
+...
+INFO:tensorflow:Step 100 per-step time 1.153s loss=0.761
+I0716 05:26:55.879558  1364 model_lib_v2.py:632] Step 100 per-step time 1.153s loss=0.761
+...
+```
+
 
