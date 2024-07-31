@@ -230,3 +230,14 @@ training_demo/
 
 Once you have build the file structure and copied the `.config` from `pre-trained-model/model_name` to `models/model_name`.
 Here `model_name = ssd_mobilenet_v2_fpnlite` based on pre-trained model we are using.  
+
+## 5. Training the Model
+Before we begin training our model, let’s go and copy the `TensorFlow/models/research/object_detection/model_main_tf2.py` script and paste it straight into our training_demo folder. We will need this script in order to train our model.
+
+Now, to initiate a new training job, open a new Terminal, cd inside the training_demo folder and run the following command:
+```sh
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+```
+Once the training process has been initiated, you should see a series of print outs similar to the one below (plus/minus some warnings):
+
+
