@@ -253,6 +253,8 @@ I0716 05:26:55.879558  1364 model_lib_v2.py:632] Step 100 per-step time 1.153s l
 ```
 This ensures you have successfully trained the model.
 
+To perform Training task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/training_model.py">code</a>. 
+
 ### 5.1 Evaluate the Model (optional)
 By default, the training process logs some basic measures of training performance. These seem to change depending on the installed version of Tensorflow.
 
@@ -273,3 +275,4 @@ The third step is to actually run the evaluation. To do so, open a new Terminal,
 ```
 python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config --checkpoint_dir=models/ssd_mobilenet_v2_fpnlite
 ```
+To perform evalution task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/evaluation_script.py">code</a>. 
