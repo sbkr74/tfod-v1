@@ -226,3 +226,7 @@ training_demo/
 │     └─ pipeline.config
 └─ ...
 ```
+<b><a href="https://github.com/sbkr74/tfod-v1/blob/main/configure_pipeline_path.py">code</a></b> for reference.
+
+Once you have build the file structure and copied the `.config` from `pre-trained-model/model_name` to `models/model_name`.
+Here `model_name = ssd_mobilenet_v2_fpnlite` based on pre-trained model we are using.  
