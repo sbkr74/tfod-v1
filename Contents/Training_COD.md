@@ -256,4 +256,20 @@ This ensures you have successfully trained the model.
 ### 5.1 Evaluate the Model (optional)
 By default, the training process logs some basic measures of training performance. These seem to change depending on the installed version of Tensorflow.
 
+#### The steps to run the evaluation are outlined below:
 
+1. Firstly we need to download and install the metrics we want to use.
+
+    - For a description of the supported object detection evaluation metrics, see here.
+
+    - The process of installing the COCO evaluation metrics is described in COCO API installation.
+
+2. Secondly, we must modify the configuration pipeline (*.config script).
+
+See lines 181-182 of the <a href="https://github.com/sbkr74/tfod-v1/blob/main/repo_files/pipeline.config">script</a> in Configure the Training Pipeline.
+
+The third step is to actually run the evaluation. To do so, open a new Terminal, cd inside the training_demo folder and run the following command:
+
+```
+python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config --checkpoint_dir=models/ssd_mobilenet_v2_fpnlite
+```
