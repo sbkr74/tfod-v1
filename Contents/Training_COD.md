@@ -283,3 +283,7 @@ Once your training job is complete, you need to extract the newly trained infere
 Copy the `TensorFlow/models/research/object_detection/exporter_main_v2.py` script and paste it straight into your `training_demo` folder.
 
 Now, open a Terminal, `cd` inside your `training_demo` folder, and run the following command:
+```sh
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir .\models\ssd_mobilenet_v2_fpnlite\ --output_directory .\exported-models\my_model
+```
+
