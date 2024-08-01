@@ -276,3 +276,10 @@ The third step is to actually run the evaluation. To do so, open a new Terminal,
 python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config --checkpoint_dir=models/ssd_mobilenet_v2_fpnlite
 ```
 To perform evalution task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/evaluation_script.py">code</a>. 
+
+# 6. Exporting trained Model
+Once your training job is complete, you need to extract the newly trained inference graph, which will be later used to perform the object detection. This can be done as follows:
+
+Copy the `TensorFlow/models/research/object_detection/exporter_main_v2.py` script and paste it straight into your `training_demo` folder.
+
+Now, open a Terminal, `cd` inside your `training_demo` folder, and run the following command:
