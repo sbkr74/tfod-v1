@@ -277,6 +277,10 @@ python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_
 ```
 To perform evalution task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/evaluation_script.py">code</a>. 
 
+<b>Before exporting we should ensure the Model performance evalation of trained model.</b>
+- Based on <a href = "https://github.com/sbkr74/tfod-v1/blob/main/test.py">captured image</a>.
+- Based on <a href = "https://github.com/sbkr74/tfod-v1/blob/main/test1.py">webcam</a>.
+
 # 6. Exporting trained Model
 Once your training job is complete, you need to extract the newly trained inference graph, which will be later used to perform the object detection. This can be done as follows:
 
