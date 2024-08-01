@@ -287,3 +287,14 @@ Now, open a Terminal, `cd` inside your `training_demo` folder, and run the follo
 python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir .\models\ssd_mobilenet_v2_fpnlite\ --output_directory .\exported-models\my_model
 ```
 
+After the above process has completed, you should find a new folder my_model under the training_demo/exported-models, that has the following structure:
+```
+training_demo/
+├─ ...
+├─ exported-models/
+│  └─ my_model/
+│     ├─ checkpoint/
+│     ├─ saved_model/
+│     └─ pipeline.config
+└─ ...
+```
