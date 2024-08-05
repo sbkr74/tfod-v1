@@ -97,3 +97,6 @@ python -m pip install .
 # From within TensorFlow/models/research/
 python object_detection/builders/model_builder_tf2_test.py
 ```
+
+## After Model is installed we have Train the model for our use-case.
+### <a href = "https://github.com/sbkr74/tfod-v1/blob/main/Contents/Training_COD.md">Training Model</a> 
