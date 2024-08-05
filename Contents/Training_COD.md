@@ -195,7 +195,7 @@ python generate_tfrecord.py -x [PATH_TO_IMAGES_FOLDER]/test -l [PATH_TO_ANNOTATI
 ```
 
 `For Reference`  
-- refer to <a href="[tf_record_generation.py](https://github.com/sbkr74/tfod-v1/blob/main/tf_record_generation.py)">tf_records</a> script.
+- refer to <a href="https://github.com/sbkr74/tfod-v1/blob/main/tf_record_generation.py">tf_records</a> script.
 
 
 ## 4. Download and configure Pre-trained Model
@@ -255,7 +255,7 @@ This ensures you have successfully trained the model.
 
 To perform Training task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/training_model.py">code</a>. 
 
-### 5.1 Evaluate the Model (optional)
+### 5.1. Evaluate the Model (optional)
 By default, the training process logs some basic measures of training performance. These seem to change depending on the installed version of Tensorflow.
 
 #### The steps to run the evaluation are outlined below:
@@ -276,6 +276,24 @@ The third step is to actually run the evaluation. To do so, open a new Terminal,
 python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite/pipeline.config --checkpoint_dir=models/ssd_mobilenet_v2_fpnlite
 ```
 To perform evalution task check <a href="https://github.com/sbkr74/tfod-v1/blob/main/evaluation_script.py">code</a>. 
+
+### 5.2. Monitor Training Job Progress using TensorBoard
+ A very nice feature of TensorFlow, is that it allows you to coninuously monitor and visualise a number of different training/evaluation metrics, while your model is being trained. The specific tool that allows us to do all that is `Tensorboard`.
+
+ To start a new TensorBoard server, we follow the following steps:
+
+ Run the following command:
+<pre>
+tensorboard --logdir=models/ssd_mobilenet_v2_fpnlite
+</pre>
+The above command will start a new TensorBoard server, which (by default) listens to port `6006` of your machine. Assuming that everything went well, you should see a print-out similar to the one below (plus/minus some warnings):
+```
+...
+TensorBoard 2.2.2 at http://localhost:6006/ (Press CTRL+C to quit)
+``` 
+Once this is done, go to your browser and type http://localhost:6006/ in your address bar, following which you should be presented with a dashboard similar to the one shown below (maybe less populated if your model has just started training):
+
+![alt text](../repo_files/tensorboard.png)
 
 <b>Before exporting we should ensure the Model performance evalation of trained model.</b>
 - Based on <a href = "https://github.com/sbkr74/tfod-v1/blob/main/test.py">captured image</a>.
